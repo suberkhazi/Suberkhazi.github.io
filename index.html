@@ -265,7 +265,6 @@
         color: var(--resume-accent);
       }
 
-
       /* Section Styles */
       section {
         padding: 2rem 0;
@@ -428,6 +427,8 @@
         padding: 2rem;
         transition: all 0.3s;
         cursor: pointer;
+        display: flex;
+        flex-direction: column;
       }
 
       .project-card:hover {
@@ -481,6 +482,13 @@
         color: var(--accent);
       }
 
+      .project-links-wrapper {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        margin-top: auto; /* Optional: Pushes the links to the bottom if cards have varying heights */
+      }
+
       .project-link {
         color: var(--accent);
         text-decoration: none;
@@ -489,6 +497,20 @@
         align-items: center;
         gap: 0.5rem;
         transition: gap 0.3s;
+      }
+
+      .project-live {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: gap 0.3s;
+      }
+
+      .project-link:hover {
+        gap: 1rem;
       }
 
       .project-link:hover {
@@ -674,8 +696,8 @@
           <p class="description">
             Building real systems on modern + self-hosted infrastructure. M.Sc.
             Global Software Development student at Hochschule Fulda with 3+
-            years of experience in product engineering, UI modules, backend and full-stack development, 
-            and practical deployment.
+            years of experience in product engineering, UI modules, backend and
+            full-stack development, and practical deployment.
           </p>
           <div class="cta-buttons">
             <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -698,10 +720,10 @@
         <div class="about-content">
           <div class="about-text">
             <p>
-              I build end-to-end products across frontend, backend, and
-              deployment layers. My work focuses on clean product delivery,
-              reusable components, strong API design, and practical engineering
-              decisions.
+              I build end-to-end products across frontend, backend, App
+              Development and deployment layers. My work focuses on clean
+              product delivery, reusable components, strong API design, and
+              practical engineering decisions.
             </p>
             <p>
               Currently pursuing my M.Sc. in Global Software Development at
@@ -728,7 +750,7 @@
             </div>
             <div class="info-item">
               <span class="info-label">Phone</span>
-              <span class="info-value">+49 157 36949789</span>
+              <span class="info-value">+49 15736949789</span>
             </div>
             <div class="info-item">
               <span class="info-label">Languages</span>
@@ -748,7 +770,7 @@
         </div>
         <div class="timeline">
           <div class="timeline-item fade-in">
-            <div class="timeline-date">Oct 2022 – Jul 2024</div>
+            <div class="timeline-date">Oct 2022 - Jul 2024</div>
             <h3 class="timeline-title">Product Engineer</h3>
             <div class="timeline-company">Selfservit · Pune, India</div>
             <ul class="timeline-description">
@@ -779,10 +801,12 @@
             </div>
             <ul class="timeline-description">
               <li>
-                Built Dialogflow chatbot flows with intent-based responses
+                Built Dialogflow chatbot flows with intent-based responses and
+                Visualized insights through charts and dashboards
               </li>
               <li>
-                Implemented scikit-learn workflows and EDA with Pandas/NumPy
+                Built ML models using scikit-learn for prediction tasks and
+                performed EDA with Pandas, NumPy, and Matplotlib
               </li>
               <li>Created basic Tkinter GUIs and Matplotlib visualizations</li>
             </ul>
@@ -800,6 +824,9 @@
               </li>
               <li>
                 Improved UX via AJAX search/filter and production bug-fix cycles
+              </li>
+              <li>
+                Git & GitHub and bit of Docker containerization for deployment
               </li>
             </ul>
           </div>
@@ -820,54 +847,37 @@
           <div class="project-card fade-in">
             <div class="project-header">
               <div>
-                <h3 class="project-title">ReelVault</h3>
+                <h3 class="project-title">Beryllium-Lab</h3>
               </div>
-              <div class="project-icon">📱</div>
+              <div class="project-icon">🔬</div>
             </div>
             <p class="project-description">
-              Private AI media cloud with web + Android clients, OCR, smart
-              search, and secure sharing.
+              Hub repository for self-hosted experiments and tools built on
+              repurposed hardware.
             </p>
             <div class="tech-tags">
-              <span class="tech-tag">React/TS</span>
-              <span class="tech-tag">React Native</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">SQLite</span>
-              <span class="tech-tag">TensorFlow.js</span>
-              <span class="tech-tag">Tesseract.js</span>
-            </div>
-            <a href="#" class="project-link">View Repository →</a>
-          </div>
-
-          <div class="project-card fade-in">
-            <div class="project-header">
-              <div>
-                <h3 class="project-title">AllInOne (Beryllium Core)</h3>
-              </div>
-              <div class="project-icon">🔧</div>
-            </div>
-            <p class="project-description">
-              Monorepo productivity platform with synced web/mobile experience
-              and self-hosted backend infra.
-            </p>
-            <div class="tech-tags">
-              <span class="tech-tag">React + Vite</span>
-              <span class="tech-tag">React Native</span>
-              <span class="tech-tag">Expo</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">MariaDB</span>
-              <span class="tech-tag">PM2</span>
+              <span class="tech-tag">postmarketOS</span>
+              <span class="tech-tag">Linux services</span>
+              <span class="tech-tag">GitHub workflows</span>
               <span class="tech-tag">Tailscale</span>
+              <span class="tech-tag">Poco F1</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">PM2</span>
             </div>
-            <a href="#" class="project-link">View Repository →</a>
+            <div class="project-links-wrapper">
+              <a
+                href="https://suberkhazi.github.io/beryllium-lab/"
+                target="_blank"
+                class="project-link"
+                >View Lab →</a
+              >
+            </div>
           </div>
-
           <div class="project-card fade-in">
             <div class="project-header">
               <div>
-                <h3 class="project-title">Poco_Dashboard</h3>
+                <h3 class="project-title">Poco Dashboard</h3>
               </div>
               <div class="project-icon">📊</div>
             </div>
@@ -882,27 +892,184 @@
               <span class="tech-tag">Linux /proc</span>
               <span class="tech-tag">Tailscale Funnel</span>
             </div>
-            <a href="#" class="project-link">View Repository →</a>
+            <div class="project-links-wrapper">
+              <a
+                href="https://github.com/suberkhazi/Poco_Dashboard"
+                target="_blank"
+                class="project-link"
+                >View Repository →</a
+              >
+              <a
+                href="https://suberkhazi.github.io/Poco_Dashboard/"
+                target="_blank"
+                class="project-live"
+                >View Live →</a
+              >
+            </div>
+          </div>
+          <div class="project-card fade-in">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">ReelVault</h3>
+              </div>
+              <div class="project-icon">📱</div>
+            </div>
+            <p class="project-description">
+              Private AI media cloud with web + Android App, Personal Reels
+              style viewing, OCR, smart search, secure sharing and much more.
+            </p>
+            <div class="tech-tags">
+              <span class="tech-tag">React/TS</span>
+              <span class="tech-tag">React Native</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">TensorFlow.js</span>
+              <span class="tech-tag">Tesseract.js</span>
+              <span class="tech-tag">AI/ML</span>
+              <span class="tech-tag">Expo Android</span>
+            </div>
+            <div class="project-links-wrapper">
+              <a
+                href="https://github.com/suberkhazi/ReelVault"
+                target="_blank"
+                class="project-link"
+                >View Repository →</a
+              >
+              <a
+                href="https://reel-vault-pi.vercel.app/"
+                target="_blank"
+                class="project-live"
+                >View Live →</a
+              >
+            </div>
           </div>
 
           <div class="project-card fade-in">
             <div class="project-header">
               <div>
-                <h3 class="project-title">beryllium-lab</h3>
+                <h3 class="project-title">All In One</h3>
               </div>
-              <div class="project-icon">🔬</div>
+              <div class="project-icon">🔧</div>
             </div>
             <p class="project-description">
-              Hub repository for self-hosted experiments and tools built on
-              repurposed hardware.
+              Monorepo productivity platform with synced web/mobile experience
+              and self-hosted on repurposed phone backend infra.
             </p>
             <div class="tech-tags">
-              <span class="tech-tag">postmarketOS</span>
-              <span class="tech-tag">Linux services</span>
-              <span class="tech-tag">GitHub workflows</span>
+              <span class="tech-tag">React + Vite</span>
+              <span class="tech-tag">React Native</span>
+              <span class="tech-tag">Expo</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express</span>
+              <span class="tech-tag">MariaDB</span>
+              <span class="tech-tag">PM2</span>
               <span class="tech-tag">Tailscale</span>
+              <span class="tech-tag">OCR</span>
+              <span class="tech-tag">Tesseract.js</span>
             </div>
-            <a href="#" class="project-link">View Repository →</a>
+            <div class="project-links-wrapper">
+              <a
+                href="https://github.com/suberkhazi/AllInOne"
+                target="_blank"
+                class="project-link"
+                >View Repository →</a
+              >
+              <a
+                href="https://all-in-one-sage.vercel.app/"
+                target="_blank"
+                class="project-live"
+                >View Live →</a
+              >
+            </div>
+          </div>
+          <div class="project-card fade-in">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">CampusXchange</h3>
+              </div>
+              <div class="project-icon">🔄</div>
+            </div>
+            <p class="project-description">
+              As Backend Lead for a university item-exchange platform, I
+              developed REST APIs for listings and platform workflows. I built
+              the centralized admin panel and approval flow, and deployed the
+              backend on AWS EC2 behind Nginx for stable access.
+            </p>
+            <div class="tech-tags">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Tanstack</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express</span>
+              <span class="tech-tag">Amazon EC2</span>
+              <span class="tech-tag">Nginx</span>
+            </div>
+            <div class="project-links-wrapper">
+              <a
+                href="https://github.com/suberkhazi/GDSD_CampusXchange"
+                target="_blank"
+                class="project-link"
+                >View Repository →</a
+              >
+            </div>
+          </div>
+          <div class="project-card fade-in">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">
+                  Crop Yield Prediction Based on Indian Agricultural
+                </h3>
+              </div>
+              <div class="project-icon">🌾</div>
+            </div>
+            <p class="project-description">
+              Trained regression models (Kernel Ridge, Lasso, Elastic Net) and
+              compared performance. Built preprocessing pipeline and a simple
+              Flask interface to view predictions. (Final Year B.Eng. Project)
+            </p>
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">Bootstrap</span>
+              <span class="tech-tag">Pandas</span>
+            </div>
+            <div class="project-links-wrapper">
+              <a
+                href="https://github.com/suberkhazi/Crop-yield-prediction-based-on-Indian-agriculture-using-machine-learning"
+                target="_blank"
+                class="project-link"
+                >View Repository →</a
+              >
+            </div>
+          </div>
+          <div class="project-card fade-in">
+            <div class="project-header">
+              <div>
+                <h3 class="project-title">Online Library Management System</h3>
+              </div>
+              <div class="project-icon">📚</div>
+            </div>
+            <p class="project-description">
+              Developed a college library portal with book tracking, user
+              accounts, and admin approvals. Using PHP as backend and used
+              Bootstrap for UI with Database as MySQL, which was actually
+              deployed and used by the college library for a period of time.
+            </p>
+            <div class="tech-tags">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Bootstrap</span>
+            </div>
+            <div class="project-links-wrapper">
+              <a
+                href="https://github.com/suberkhazi/OLMS"
+                target="_blank"
+                class="project-link"
+                >View Repository →</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -919,7 +1086,7 @@
           <div class="education-item fade-in">
             <h3 class="education-degree">M.Sc. Global Software Development</h3>
             <p class="education-school">Hochschule Fulda</p>
-            <p class="education-date">Oct 2024 – Present</p>
+            <p class="education-date">Oct 2024 - Present</p>
           </div>
 
           <div class="education-item fade-in">
@@ -929,19 +1096,19 @@
             <p class="education-school">
               Jain College of Engineering and Technology
             </p>
-            <p class="education-date">2019 – 2022</p>
+            <p class="education-date">2019 - 2022</p>
           </div>
 
           <div class="education-item fade-in">
             <h3 class="education-degree">Hardware & Networking Certificate</h3>
             <p class="education-school">ICS</p>
-            <p class="education-date">2018 – 2019</p>
+            <p class="education-date">2018 - 2019</p>
           </div>
 
           <div class="education-item fade-in">
             <h3 class="education-degree">Diploma in Computer Science</h3>
             <p class="education-school">Government Polytechnic Hubli</p>
-            <p class="education-date">2014 – 2018</p>
+            <p class="education-date">2014 - 2018</p>
           </div>
         </div>
       </div>
@@ -971,7 +1138,7 @@
             <div class="contact-item fade-in">
               <span class="contact-icon">💼</span>
               <a
-                href="https://linkedin.com/in/suber-khaji"
+                href="https://www.linkedin.com/in/suber-khaji-14591014a/"
                 class="contact-link"
                 target="_blank"
               >
@@ -981,7 +1148,7 @@
             <div class="contact-item fade-in">
               <span class="contact-icon">🔗</span>
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/suberkhazi"
                 class="contact-link"
                 target="_blank"
               >
